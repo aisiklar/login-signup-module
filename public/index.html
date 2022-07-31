@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DeFi Capstone Project</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <section class="main-section">
+      <p class="welcome-text"> Welcome to DeFi Capsone Project: "name of the project"</p>
+      <p class="after-welcome-text"> please log-in and if you dont have an account press sign-up button</p>
+      <div class="two-forms-wrapper">
+        <div class="signin-form-wrapper">
+          <form class="signin-form">
+            <ul>
+              <li>
+                <label for="username">Enter your username (email)</label>
+                <input type="email" name="username" id="username" required/>
+              </li>
+              <li>
+                <label for="password">enter your password</label>
+                <input name="password" id="password"/>
+              </li>
+            </ul>
+            <div class="btn-signin-form">
+            <button class="btn" id="signin-button">Press to sign-in</button>
+            <button class="btn" id="button-for-signup">Sign me up!</button>
+            </div>             
+          </form>
+        </div>
+
+        <div class="signup-form-wrapper">
+          <form action="http://localhost:3000/" id="signup-form" 
+            method="post" class="sign-form">
+            <ul>
+              <li>
+                <label for="name">Enter your name: </label>
+                <input type="text" name="name" id="name" required />
+            </li>
+  
+            <li>
+                <label for="email">Enter your email (username): </label>
+                <input type="email" name="email" id="email" required />
+            </li>
+  
+            <li>
+                <label for="password">Enter your password: </label>
+                <input type="password" name="password" id="password" required />
+            </li>
+  
+          </ul>
+              <button id="signup-button" class="btn" type="submit" onclick="pressSignup"> Click to Sign-up </button>            
+            </div>
+          </form>
+        </div>
+  
+
+      </div>
+
+
+    </section>
+    <script src="./scripts/main.js" async defer></script>
+  </body>
+</html>
