@@ -27,10 +27,8 @@
       </p>
     <![endif]-->
     <section class="main-section">
-      <p class="welcome-text"> Welcome to DeFi Capsone Project: "name of the project"</p>
-      <p class="after-welcome-text"> please log-in and if you dont have an account press sign-up button</p>
         <div class="signin-form-wrapper">
-          <form class="signin-form">
+          <form action="#" method="post" class="signin-form" id="signin-form">
             <ul>
               <li>
                 <label for="username">Enter your username (email)</label>
@@ -42,15 +40,15 @@
               </li>
             </ul>
             <div class="btn-signin-form">
-            <button class="btn" id="signin-button">Press to sign-in</button>
-            <button class="btn" id="button-for-signup">Sign me up!</button>
+            <button class="btn left" id="signin-button" type="submit">Sign-in</button>
+            <button class="btn right" id="button-for-signup" type="button">Sign me up!</button>
             </div>             
           </form>
         </div>
 
         <div class="signup-form-wrapper">
-          <form action="http://localhost:3000/" id="signup-form" 
-            method="post" class="sign-form">
+          <form action="http://localhost:3000/" method="post" id="signup-form" 
+             class="signup-form">
             <ul>
               <li>
                 <label for="name">Enter your name: </label>
@@ -61,14 +59,15 @@
                 <label for="email">Enter your email (username): </label>
                 <input type="email" name="email" id="email" required />
             </li>
-  
             <li>
-                <label for="password">Enter your password: </label>
-                <input type="password" name="password" id="password" required />
+                <label for="pword">Enter your password: </label>
+                <input type="pword" name="pword" id="pword" required />
             </li>
-  
           </ul>
-              <button id="signup-button" class="btn" type="submit" onclick="pressSignup"> Click to Sign-up </button>            
+          <div class="btn-signup-wrapper">
+              <button id="signup-button" class="btn left" type="submit" onclick="pressSignup">Sign-up </button>            
+              <button id="cancel-signup-button" class="btn right" type="button" onclick="cancel-signup">Cancel</button>            
+              </div>
             </div>
           </form>
         </>
