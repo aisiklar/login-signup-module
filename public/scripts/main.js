@@ -16,15 +16,20 @@ const signinForm = document.getElementById('signin-form')
 
 const showSignupButton = document.getElementById("button-for-signup");
 
-showSignupButton.addEventListener('click', showSignup);
+const cancelSignupButton = document.getElementById("cancel-signup-button");
 
-function showSignup() {
-    console.log("showSignup function triggered");
+
+//Event Listener for show Signup Button
+showSignupButton.addEventListener('click', (event) => {
+    //console.log("showSignup function triggered");
     signupForm.style.display = "block";
     signinForm.replaceWith(signupForm);
-}
+});
 
-
-function pressSignup(event) {
-    console.log("button pressed")
-}
+//event listener for cancel signup Button
+cancelSignupButton.addEventListener('click', (event) => {
+    //console.log('cancel Signup Button pressed');
+    //console.log(event);
+    signupForm.replaceWith(signinForm);
+    signupForm.style.display = "none";
+})
