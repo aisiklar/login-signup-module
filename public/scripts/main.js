@@ -19,7 +19,7 @@ const showSignupButton = document.getElementById("button-for-signup");
 const cancelSignupButton = document.getElementById("cancel-signup-button");
 
 
-//Event Listener for show Signup Button
+//Event Listener for show Signup Button.
 showSignupButton.addEventListener('click', (event) => {
     //console.log("showSignup function triggered");
     signupForm.style.display = "block";
