@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const Datastore = require('nedb');
 
+// to parse req.body
 app.use(express.urlencoded())
 
 /* app.get('/', (req, res) => {
@@ -18,8 +19,11 @@ app.use('/', express.static('public'));
 // create a database and load automatically
 let db = new Datastore({ filename: './database/accounts.db', autoload: true });
 
+
+
 let numberOfAccounts = 0;
 
+// check the database for any previous entries
 db.count({}, (err, count) => {
    console.log(`count: ${count}`);
    numberOfAccounts = count;
@@ -49,6 +53,8 @@ app.post('/signin', (req, res, next) => {
    console.log(`username, password: ${username}, ${password}`);
 });
 
+// signing up for a new account
+// endpoint for signup
 app.post('/signup', (req, res, next) => {
    console.log('received post request');
    console.log(req.body);
@@ -56,9 +62,25 @@ app.post('/signup', (req, res, next) => {
    let username = req.body.email;
    let name = req.body.name;
    let password = req.body.pword;
+
+   // search whether the username (email) has been registered before
+   db.find({ username: username }, (err, docs) => {
+      if (docs = []) {
+         console.log('first registry of the username');
+      }
+      else {
+         for (element in req.body) {
+            console.log(element, req.body[element]);
+         }
+         console.log('this username has already registered!!!')
+      }
+   })
+
+
    let register = {
       '_id': id,
        'name': name, 
+       'username': username,
        'password': password
    };
    for (elements in register) {
