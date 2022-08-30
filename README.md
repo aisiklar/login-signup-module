@@ -1,6 +1,15 @@
-# DeFi Talents Cohort-2 Program, Capstone project
+# Little Project: Login - signup module
 
-This github repo includes the codebase for the project.
+This is a login-signup module, that can be used in other projects.
+
+### Tech stack:
+* HTML, CSS and JavaScript
+* NodeJS, Express.js
+* NeDb (node package, a mongo-like database)
+
+
+
+
 
 
 ## Remarks:
