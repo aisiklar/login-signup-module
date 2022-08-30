@@ -8,13 +8,8 @@ This is a login-signup module, that can be used in other projects.
 * NeDb (node package, a mongo-like database)
 
 
-
-
-
-
 ## Remarks:
-to be defined...
-
+see the devNotes for details and development progress, feature backlog etc.
 
 
 
