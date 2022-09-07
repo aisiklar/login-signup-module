@@ -8,7 +8,7 @@ form.addEventListener("submit", event => {
  */
 
 
-const signupButton = document.getElementById('button-for-signup');
+//const signupButton = document.getElementById('button-for-signup');
 
 const signupForm = document.getElementById('signup-form');
 
