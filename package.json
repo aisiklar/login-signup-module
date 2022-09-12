@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "hash.js": "^1.1.7",
     "nedb": "^1.8.0",
     "nodemon": "^2.0.19"
   }

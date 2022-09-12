@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const Datastore = require('nedb');
+const hash = require('hash.js');
+var sha256 = require('hash.js/lib/hash/sha/256');
+
 
 app.use(express.urlencoded())
 
@@ -23,7 +26,11 @@ app.post('/register', (req, res, next) => {
    let register = req.body;
    let username = register.email;
    let name = register.name;
-   let password = register.password;
+   let password = register.pword;
+   let passwordHashed = hash.sha256().update(password).digest('hex');
+   console.log(`password: ${password}, passwordHashed: ${passwordHashed}`);
+   // let passwordHashed = sha256.update(password).digest('hex');
+   register.pword = passwordHashed;
    let registerTime = new Date();
    register.registerTime = registerTime.toString();
    console.log("register: ")
