@@ -11,15 +11,16 @@ Following features are to be added to the module.
      - [x]  time for registration
       - [ ] user-specific data, which can be submitted after signing up, signing in at the landing page after registration
 - [x] hash the password and save the hashed key to the db. (Done for the backend side. a new priority-3 level item is added for front end side)
-- [ ] After signing up, user will login with her credentials.
+- [ ] ALTN-1: after signing up, directing to another page, for ex directing to landing page, where the user can see her data)
+- [ ] ALTN-2: after signing up, directing to another page, for ex directing to login page, where the user can login!)
+- [ ] After signing up, user will be able to login with her credentials.
 - [ ] After signing in, user will see her data in the signin page, and submit / modify her data in the related fields.
   * name
   * age
   * work definition
   * company
+  * email and password
   * etc...
-- [ ] session / accounts page according to the account info (after signing up, directing to another page, for ex. login page. After logging in, directing to landing page, where the user can see her data)
-- [ ] user will change the email and password (modifications on the db)
 - [ ] user should be able to erase her account (erase from the database)
 
 ### 3rd priority - optional items
