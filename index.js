@@ -9,7 +9,7 @@ app.use(express.urlencoded());
 /* app.get('/', (req, res) => {
     console.log('hello world'); 
 }) */
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`listening to ${port}`);
@@ -42,5 +42,5 @@ app.post("/register", (req, res, next) => {
   //   res.redirect(301, './');
   //response.set("location", "./");
   //response.status(301).send();
-  return res.redirect(301, 'http://localhost:3000')
+  res.redirect('/');
 });

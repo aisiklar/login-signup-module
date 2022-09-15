@@ -1,7 +1,7 @@
 {
-  "name": "defi-capstone-project",
+  "name": "login-signup-module",
   "version": "1.0.0",
-  "description": "Defi Talents Capstone Project",
+  "description": "login and signup module",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "hash.js": "^1.1.7",
     "nedb": "^1.8.0",
