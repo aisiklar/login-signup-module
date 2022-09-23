@@ -33,3 +33,7 @@ cancelSignupButton.addEventListener('click', (event) => {
     signupForm.replaceWith(signinForm);
     signupForm.style.display = "none";
 })
+
+signupForm.addEventListener('submit', (event)=> {
+    console.log(event.target)
+})
